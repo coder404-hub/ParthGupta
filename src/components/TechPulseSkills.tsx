@@ -3,14 +3,11 @@
 import { motion } from 'framer-motion';
 
 const SKILLS = [
-  { name: "Node.js", color: "#68A063", type: "Runtime" },
-  { name: "Go", color: "#00ADD8", type: "Language" },
-  { name: "PostgreSQL", color: "#336791", type: "Database" },
-  { name: "AWS", color: "#FF9900", type: "Cloud" },
-  { name: "Redis", color: "#DC382D", type: "Caching" },
-  { name: "Docker", color: "#2496ED", type: "Container" },
-  { name: "TypeScript", color: "#3178C6", type: "Language" },
-  { name: "GraphQL", color: "#E10098", type: "Protocol" },
+  { name: "Java", color: "#ED8B00", type: "Language" },
+  { name: "C", color: "#A8B9CC", type: "Language" },
+  { name: "GitHub", color: "#181717", type: "VCS" },
+  { name: "HTML", color: "#E34F26", type: "Frontend" },
+  { name: "CSS", color: "#1572B6", type: "Styling" },
 ];
 
 export default function TechPulseSkills() {

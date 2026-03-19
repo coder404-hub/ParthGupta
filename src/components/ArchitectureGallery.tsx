@@ -15,35 +15,50 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     id: "p1",
-    name: "Distributed Order System",
-    description: "High-throughput order processing using message queues.",
+    name: "Errnd",
+    description: "A startup-ready platform for posting tasks and localized service exchange.",
     nodes: [
-      { id: "A", label: "Client", icon: <Cpu size={16} />, type: "client" },
-      { id: "B", label: "Load Balancer", icon: <Server size={16} />, type: "network" },
-      { id: "C", label: "Order Service", icon: <Activity size={16} />, type: "compute" },
-      { id: "D", label: "PostgreSQL", icon: <Database size={16} />, type: "db" },
+      { id: "A", label: "User App", icon: <Cpu size={16} />, type: "client" },
+      { id: "B", label: "Task Engine", icon: <Activity size={16} />, type: "compute" },
+      { id: "C", label: "MongoDB", icon: <Database size={16} />, type: "db" },
+      { id: "D", label: "Auth Service", icon: <Server size={16} />, type: "compute" },
     ],
     connections: [
       { from: "A", to: "B" },
       { from: "B", to: "C" },
-      { from: "C", to: "D" }
+      { from: "B", to: "D" }
     ]
   },
   {
     id: "p2",
-    name: "Real-time Notification Engine",
-    description: "WebSocket-based service for instant user alerts.",
+    name: "Career Recommender",
+    description: "AI-driven career discovery platform with personalized roadmaps and resume analysis.",
     nodes: [
-      { id: "A", label: "Frontend", icon: <Cpu size={16} />, type: "client" },
-      { id: "B", label: "API Gateway", icon: <Cloud size={16} />, type: "network" },
-      { id: "C", label: "Redis Pub/Sub", icon: <Database size={16} />, type: "db" },
-      { id: "D", label: "Worker", icon: <Server size={16} />, type: "compute" },
+      { id: "A", label: "Next.js UI", icon: <Cpu size={16} />, type: "client" },
+      { id: "B", label: "AI Engine", icon: <Activity size={16} />, type: "compute" },
+      { id: "C", label: "User Data", icon: <Database size={16} />, type: "db" },
+      { id: "D", label: "Vercel Edge", icon: <Cloud size={16} />, type: "network" },
     ],
     connections: [
-      { from: "A", to: "B" },
-      { from: "B", to: "C" },
-      { from: "C", to: "D" },
-      { from: "D", to: "A" }
+      { from: "A", to: "D" },
+      { from: "D", to: "B" },
+      { from: "B", to: "C" }
+    ]
+  },
+  {
+    id: "p3",
+    name: "Sewadar Insurance",
+    description: "A professional insurance marketing portal with real-time consultation features.",
+    nodes: [
+      { id: "A", label: "Web Portal", icon: <Cpu size={16} />, type: "client" },
+      { id: "B", label: "Lead Handler", icon: <Activity size={16} />, type: "compute" },
+      { id: "C", label: "WA Integration", icon: <Server size={16} />, type: "network" },
+      { id: "D", label: "Next.js", icon: <Cloud size={16} />, type: "network" },
+    ],
+    connections: [
+      { from: "A", to: "D" },
+      { from: "D", to: "B" },
+      { from: "B", to: "C" }
     ]
   }
 ];

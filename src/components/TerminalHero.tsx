@@ -6,13 +6,13 @@ import { Terminal } from 'lucide-react';
 
 const BOOT_SEQUENCE = [
   "Initialize system.... OK",
-  "Loading architecture dependencies.... OK",
-  "Mounting infrastructure.... OK",
-  "Checking database connections.... OK",
-  "Starting core modules.... OK",
+  "Loading student_profile: Parth Gupta.... OK",
+  "Status: Currently exploring the depths of Code & College life.",
+  "Mounting core_skills.... OK",
   "System ready.",
-  "> Hi, I'm a Backend Developer.",
-  "> I architect and build scalable systems."
+  "> Hi, I'm Parth Gupta.",
+  "> I'm a student developer curious about how the digital world is built.",
+  "> Learning everyday, one line of code at a time."
 ];
 
 export default function TerminalHero() {

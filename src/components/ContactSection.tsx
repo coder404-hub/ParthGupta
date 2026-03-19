@@ -56,14 +56,18 @@ export default function ContactSection() {
                 <div className="flex items-center justify-between p-3 rounded border border-circuit bg-black/50 hover:border-slate-700 transition-colors">
                   <span className="text-sm font-mono text-slate-300">Email</span>
                   <button 
-                    onClick={handleCopy}
+                    onClick={() => {
+                        navigator.clipboard.writeText("parthgupta@example.com"); // Placeholder for now, but better than example.com
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 2000);
+                    }}
                     className="text-slate-400 hover:text-neon-cyan transition-colors"
                   >
                     {copied ? <CheckCircle2 size={16} className="text-green-500" /> : <Copy size={16} />}
                   </button>
                 </div>
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/coder404-hub/" 
                   target="_blank" 
                   rel="noreferrer"
                   className="flex items-center justify-between p-3 rounded border border-circuit bg-black/50 hover:border-slate-700 transition-colors block cursor-pointer"
@@ -72,7 +76,7 @@ export default function ContactSection() {
                   <span className="text-neon-cyan text-xs">external_link↗</span>
                 </a>
                 <a 
-                  href="https://linkedin.com/" 
+                  href="https://www.linkedin.com/in/parth-gupta-a7a230379/" 
                   target="_blank" 
                   rel="noreferrer"
                   className="flex items-center justify-between p-3 rounded border border-circuit bg-black/50 hover:border-slate-700 transition-colors block cursor-pointer"
@@ -98,9 +102,12 @@ export default function ContactSection() {
               </pre>
 
               <div className="absolute bottom-6 left-6 right-6">
-                 <button className="w-full py-3 bg-neon-cyan/10 hover:bg-neon-cyan/20 border border-neon-cyan/50 text-neon-cyan font-mono text-sm rounded transition-all hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]">
-                   execute_request()
-                 </button>
+                <a 
+                  href="mailto:parthgupta@example.com?subject=Inquiry from Portfolio"
+                  className="w-full py-3 bg-neon-cyan/10 hover:bg-neon-cyan/20 border border-neon-cyan/50 text-neon-cyan font-mono text-sm rounded transition-all hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] flex items-center justify-center cursor-pointer"
+                >
+                  execute_request()
+                </a>
               </div>
             </div>
           </div>

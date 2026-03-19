@@ -1,26 +1,24 @@
-import DataFlowBackground from "@/components/DataFlowBackground";
 import TerminalHero from "@/components/TerminalHero";
-import ArchitectureGallery from "@/components/ArchitectureGallery";
+import AboutSection from "@/components/AboutSection";
+import ProjectCards from "@/components/ProjectCards";
 import TechPulseSkills from "@/components/TechPulseSkills";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      {/* Background Layer */}
-      <DataFlowBackground />
-
-      {/* Content Layers with Scan-Line Reveal */}
-      <div className="relative z-10">
-        <TerminalHero />
-        <ArchitectureGallery />
-        <TechPulseSkills />
-        <ContactSection />
+    <main className="min-h-screen relative bg-obsidian selection:bg-indigo-500/30">
+      {/* Subtle Background */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full" />
       </div>
 
-      {/* Global CSS animation for the radar scan-line effect across the page */}
-      <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden mix-blend-overlay">
-        <div className="w-full h-32 bg-gradient-to-b from-transparent via-neon-cyan/5 to-transparent animate-[scanline_8s_linear_infinite]" />
+      <div className="relative z-10 w-full mb-24">
+        <TerminalHero />
+        <AboutSection />
+        <ProjectCards />
+        <TechPulseSkills />
+        <ContactSection />
       </div>
     </main>
   );

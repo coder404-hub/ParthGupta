@@ -1,39 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-obsidian: #0a0a0a;
-  --color-circuit: #2a2a2a;
-  --color-neon-cyan: #00f0ff;
-  --font-mono: var(--font-jetbrains-mono);
-
-  /* Custom animations for the Tech Pulse and radar scanline */
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-scanline: scanline 6s linear infinite;
-  
-  @keyframes scanline {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100vh); }
-  }
+  --color-obsidian: #050505;
+  --color-slate-dark: #0a0a0b;
+  --color-indigo-primary: #6366f1;
+  --font-sans: var(--font-inter);
 }
 
 html, body {
   background-color: theme('colors.obsidian');
-  color: #cbd5e1; /* slate-300 */
-  font-family: var(--font-mono);
+  color: #94a3b8; /* slate-400 */
+  font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar for terminal vibe */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: theme('colors.obsidian'); 
+  background: var(--color-obsidian); 
 }
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.circuit'); 
+  background: #2a2a2a; 
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.neon-cyan'); 
+  background: var(--color-indigo-primary); 
 }

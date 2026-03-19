@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Backend Developer | Obsidian Tech Portfolio",
-  description: "High-end, modern portfolio showcasing scalable systems.",
+  title: "Parth Gupta | Developer Portfolio",
+  description: "Minimal, professional portfolio of Parth Gupta, showcasing clean code and scalable systems.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${jetbrainsMono.variable} font-mono bg-obsidian text-slate-300 antialiased selection:bg-neon-cyan selection:text-obsidian overflow-x-hidden`}
+        className={`${inter.variable} font-sans bg-obsidian text-slate-300 antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden`}
       >
         {children}
       </body>

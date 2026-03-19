@@ -12,54 +12,30 @@ const SKILLS = [
 
 export default function TechPulseSkills() {
   return (
-    <section className="py-20 px-6 max-w-5xl mx-auto relative z-10" id="skills">
+    <section className="py-24 px-6 max-w-5xl mx-auto relative z-10" id="skills">
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-        }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >
-        <div className="flex items-center gap-4 mb-10">
-          <h2 className="text-2xl font-bold text-slate-200">/tech/pulse</h2>
-          <div className="h-[1px] flex-1 bg-circuit" />
+        <div className="flex items-center gap-4 mb-12">
+          <h2 className="text-3xl font-bold text-white tracking-tight">Skills</h2>
+          <div className="h-px flex-1 bg-white/5" />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
           {SKILLS.map((skill) => (
             <motion.div
               key={skill.name}
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: { opacity: 1, scale: 1 }
-              }}
-              whileHover={{ scale: 1.05 }}
-              className="relative group p-4 border border-circuit rounded-lg bg-obsidian text-center overflow-hidden flex flex-col items-center justify-center h-32"
+              whileHover={{ y: -2 }}
+              className="p-6 rounded-xl bg-white/[0.02] border border-white/5 text-center transition-all duration-300 hover:border-indigo-500/20"
             >
-               {/* Heartbeat pulse animation behind the text */}
-              <motion.div 
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.1, 0.3, 0.1]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 2 + Math.random(), // slight random offset for organic feel
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0 m-auto w-16 h-16 rounded-full blur-xl"
-                style={{ backgroundColor: skill.color }}
-              />
-
-              <div className="relative z-10">
-                <div className="text-lg font-bold text-slate-200 group-hover:text-white transition-colors">
-                  {skill.name}
-                </div>
-                <div className="text-xs text-slate-500 font-mono mt-2">
-                  [{skill.type}]
-                </div>
+              <div className="text-sm font-semibold text-slate-300">
+                {skill.name}
+              </div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">
+                {skill.type}
               </div>
             </motion.div>
           ))}

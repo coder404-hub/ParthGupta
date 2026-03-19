@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import MagneticButton from "./MagneticButton";
 
 export default function HeroSection() {
   return (
@@ -56,18 +57,22 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.5 }}
             className="pt-4 flex gap-4"
           >
-            <a 
-              href="#projects" 
-              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-slate-200 transition-colors"
-            >
-              View Projects
-            </a>
-            <a 
-              href="#contact" 
-              className="px-6 py-3 rounded-full border border-white/10 text-white font-medium hover:bg-white/5 transition-colors"
-            >
-              Contact Me
-            </a>
+            <MagneticButton>
+              <a 
+                href="#projects" 
+                className="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-slate-200 transition-colors block"
+              >
+                View Projects
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a 
+                href="#contact" 
+                className="px-6 py-3 rounded-full border border-white/10 text-white font-medium hover:bg-white/5 transition-colors block"
+              >
+                Contact Me
+              </a>
+            </MagneticButton>
           </motion.div>
         </motion.div>
 

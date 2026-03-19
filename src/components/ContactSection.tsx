@@ -20,7 +20,7 @@ export default function ContactSection() {
           <div className="h-px flex-1 bg-white/5" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
           <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col items-center text-center space-y-4">
              <div className="text-indigo-400 font-medium tracking-wide uppercase text-xs">Email</div>
              <button 
@@ -53,6 +53,16 @@ export default function ContactSection() {
           >
              <div className="text-indigo-400 font-medium tracking-wide uppercase text-xs group-hover:text-indigo-300 transition-colors">LinkedIn</div>
              <div className="text-slate-400 text-sm font-light group-hover:text-slate-300 transition-colors">@parth-gupta</div>
+          </a>
+
+          <a 
+            href="https://www.instagram.com/pxrth_zzz?igsh=MTR6MXgzNjR1ZHRmYg==" 
+            target="_blank" 
+            rel="noreferrer"
+            className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col items-center text-center space-y-4 hover:border-indigo-500/20 transition-all group"
+          >
+             <div className="text-indigo-400 font-medium tracking-wide uppercase text-xs group-hover:text-indigo-300 transition-colors">Instagram</div>
+             <div className="text-slate-400 text-sm font-light group-hover:text-slate-300 transition-colors">@pxrth_zzz</div>
           </a>
         </div>
       </motion.div>

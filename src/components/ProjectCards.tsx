@@ -9,18 +9,21 @@ const PROJECTS = [
     description: "A startup-ready platform for posting tasks and localized service exchange. Features real-time task tracking and secure user authentication.",
     tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS"],
     link: "https://github.com/coder404-hub/",
+    image: "/projects/errnd.png",
   },
   {
     title: "Career Recommender",
     description: "AI-driven career discovery platform with personalized roadmaps and resume analysis to help students find their ideal paths.",
     tech: ["AI/ML", "Next.js", "Vercel Edge", "Tailwind CSS"],
     link: "https://career-recomender-o33h.vercel.app/",
+    image: "/projects/career_recommender.png",
   },
   {
     title: "Sewadar Insurance",
     description: "Professional insurance marketing portal with real-time consultation features and lead management integration.",
     tech: ["Next.js", "Tailwind CSS", "WhatsApp API", "Lucide Icons"],
     link: "https://sewadarinsurancemarketing.vercel.app/",
+    image: "/projects/sewadar.png",
   }
 ];
 
@@ -44,32 +47,44 @@ export default function ProjectCards() {
             <motion.div
               key={project.title}
               whileHover={{ y: -4 }}
-              className="group p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/30 transition-all duration-300"
+              className="group rounded-2xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/30 transition-all duration-300 overflow-hidden flex flex-col"
             >
-              <div className="flex justify-between items-start mb-6">
-                <h3 className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors uppercase tracking-wide">
-                  {project.title}
-                </h3>
-                <div className="flex gap-4">
-                  <a href={project.link} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors">
-                    <Github size={20} />
-                  </a>
-                  <a href={project.link} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors">
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
+              {/* Image Preview Placeholder */}
+              <div className="w-full h-48 bg-slate-900 border-b border-white/5 relative overflow-hidden">
+                 <img 
+                   src={project.image} 
+                   alt={`${project.title} preview`}
+                   className="w-full h-full object-cover object-top opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80" />
               </div>
-              
-              <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                {project.description}
-              </p>
 
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map(tag => (
-                  <span key={tag} className="text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/5 text-slate-500">
-                    {tag}
-                  </span>
-                ))}
+              <div className="p-8 flex-1 flex flex-col">
+                <div className="flex justify-between items-start mb-6">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors uppercase tracking-wide">
+                    {project.title}
+                  </h3>
+                  <div className="flex gap-4">
+                    <a href={project.link} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors">
+                      <Github size={20} />
+                    </a>
+                    <a href={project.link} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors">
+                      <ExternalLink size={20} />
+                    </a>
+                  </div>
+                </div>
+                
+                <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-1">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map(tag => (
+                    <span key={tag} className="text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/5 text-slate-500">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

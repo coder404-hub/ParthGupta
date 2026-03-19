@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 import ProjectCards from "@/components/ProjectCards";
 import TechPulseSkills from "@/components/TechPulseSkills";
 import ContactSection from "@/components/ContactSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="relative z-10 w-full mb-24">
         <HeroSection />
         <AboutSection />
+        <ExperienceTimeline />
         <ProjectCards />
         <TechPulseSkills />
         <ContactSection />

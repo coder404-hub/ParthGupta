@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans bg-obsidian text-slate-300 antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden`}
       >
+        <ScrollProgress />
         {children}
       </body>
     </html>

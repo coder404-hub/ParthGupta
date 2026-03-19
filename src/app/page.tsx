@@ -1,4 +1,4 @@
-import TerminalHero from "@/components/TerminalHero";
+import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectCards from "@/components/ProjectCards";
 import TechPulseSkills from "@/components/TechPulseSkills";
@@ -14,7 +14,7 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 w-full mb-24">
-        <TerminalHero />
+        <HeroSection />
         <AboutSection />
         <ProjectCards />
         <TechPulseSkills />

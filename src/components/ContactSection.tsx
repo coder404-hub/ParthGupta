@@ -25,13 +25,13 @@ export default function ContactSection() {
              <div className="text-indigo-400 font-medium tracking-wide uppercase text-xs">Email</div>
              <button 
                onClick={() => {
-                 navigator.clipboard.writeText("parthgupta@example.com");
+                 navigator.clipboard.writeText("parthgupta2430@gmail.com");
                  setCopied(true);
                  setTimeout(() => setCopied(false), 2000);
                }}
                className="text-slate-400 hover:text-white transition-colors text-sm font-light"
              >
-               {copied ? "Copied!" : "parthgupta@example.com"}
+               {copied ? "Copied!" : "parthgupta2430@gmail.com"}
              </button>
           </div>
 
